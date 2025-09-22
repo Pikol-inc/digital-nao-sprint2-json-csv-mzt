@@ -5,3 +5,10 @@ NAO IDs:
 3316
 3304
 3318
+
+## HOW TO EXECUTE TESTS:
+### Requirement: 
+- Maven installed
+
+## Execute command
+> mvn test
