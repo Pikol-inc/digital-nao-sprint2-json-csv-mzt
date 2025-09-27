@@ -27,6 +27,32 @@ public class Main {
 
         // Parse command line arguments for custom delimiter
         Config config = Config.fromArgs(args);
+
+        JsonReader jsonReader = new JsonReader();
+        CsvWriter csvWriter = new CsvWriter();
+
+        try {
+            // Phase 1: Researcher publications
+            System.out.println("=== PHASE 1: Processing Researcher Publications ===");
+            processResearcherPublications(jsonReader, csvWriter, config);
+
+            // Phase 2: Department statistics
+            System.out.println("\n=== PHASE 2: Processing Department Statistics ===");
+            processDepartmentStatistics(jsonReader, csvWriter, config);
+
+            // Phase 3: Journal impact factors
+            System.out.println("\n=== PHASE 3: Processing Journal Impact Data ===");
+            processJournalImpactData(jsonReader, csvWriter, config);
+
+            System.out.println("\n✅ AUTOMATION COMPLETE!");
+            System.out.println("📊 All scientific data has been successfully processed and integrated.");
+            System.out.println("📋 Bi-monthly report files are ready for Director Érika's review.");
+
+        } catch (IOException | JSONException e) {
+            System.err.println("❌ SYSTEM ERROR: " + e.getMessage());
+            System.err.println("🔧 Please check data integrity and file permissions.");
+            e.printStackTrace();
+        }
     }
 
     private static void processResearcherPublications(JsonReader jsonReader, CsvWriter csvWriter, Config config)
