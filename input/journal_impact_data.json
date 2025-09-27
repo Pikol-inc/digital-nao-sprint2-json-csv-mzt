@@ -1,0 +1,35 @@
+[
+  {
+    "journal_name": "International Journal of Educational Technology",
+    "issn": "1234-5678",
+    "publisher": "Academic Publishers Inc.",
+    "impact_factor_2024": 2.45,
+    "impact_factor_2023": 2.31,
+    "quartile": "Q2",
+    "subject_area": "Education & Educational Research",
+    "university_publications": 3,
+    "total_citations_received": 47
+  },
+  {
+    "journal_name": "Journal of Information Security",
+    "issn": "5678-9012",
+    "publisher": "Tech Security Press",
+    "impact_factor_2024": 3.12,
+    "impact_factor_2023": 2.98,
+    "quartile": "Q1",
+    "subject_area": "Computer Science, Information Systems",
+    "university_publications": 2,
+    "total_citations_received": 89
+  },
+  {
+    "journal_name": "IEEE Software Engineering Review",
+    "issn": "9012-3456",
+    "publisher": "IEEE Computer Society",
+    "impact_factor_2024": 4.67,
+    "impact_factor_2023": 4.45,
+    "quartile": "Q1",
+    "subject_area": "Computer Science, Software Engineering",
+    "university_publications": 5,
+    "total_citations_received": 156
+  }
+]

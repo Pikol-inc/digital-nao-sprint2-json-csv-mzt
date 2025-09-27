@@ -1,0 +1,33 @@
+{
+  "report_period": "September-October 2024",
+  "total_researchers": 45,
+  "departments": [
+    {
+      "name": "Computer Sciences",
+      "researchers": 15,
+      "publications": 28,
+      "total_citations": 342,
+      "h_index": 12,
+      "average_impact_factor": 2.85
+    },
+    {
+      "name": "Information Systems",
+      "researchers": 12,
+      "publications": 19,
+      "total_citations": 267,
+      "h_index": 10,
+      "average_impact_factor": 3.21
+    },
+    {
+      "name": "Software Engineering",
+      "researchers": 18,
+      "publications": 35,
+      "total_citations": 498,
+      "h_index": 15,
+      "average_impact_factor": 3.67
+    }
+  ],
+  "report_generated_by": "Beatriz Solórzano - Scientometrics Dept",
+  "automation_time_saved": "15 hours per report",
+  "previous_manual_process_time": "18 hours"
+}

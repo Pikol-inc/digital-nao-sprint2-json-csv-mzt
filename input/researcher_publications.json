@@ -1,0 +1,65 @@
+[
+  {
+    "researcher_id": "DR001",
+    "name": "Dr. María Elena Vázquez",
+    "department": "Computer Sciences",
+    "publications": [
+      {
+        "title": "Machine Learning Applications in Academic Analytics",
+        "journal": "International Journal of Educational Technology",
+        "year": 2024,
+        "citations": 15,
+        "impact_factor": 2.45,
+        "type": "article",
+        "doi": "10.1234/ijet.2024.001"
+      },
+      {
+        "title": "Data Mining Techniques for Student Performance Prediction",
+        "conference": "International Conference on Educational Data Mining",
+        "year": 2024,
+        "citations": 8,
+        "type": "conference_paper"
+      }
+    ]
+  },
+  {
+    "researcher_id": "DR002",
+    "name": "Dr. Carlos Mendoza",
+    "department": "Information Systems",
+    "publications": [
+      {
+        "title": "Blockchain Technology in Academic Credential Verification",
+        "journal": "Journal of Information Security",
+        "year": 2024,
+        "citations": 23,
+        "impact_factor": 3.12,
+        "type": "article",
+        "doi": "10.5678/jis.2024.045"
+      }
+    ]
+  },
+  {
+    "researcher_id": "DR003",
+    "name": "Dra. Ana Sofía Ramírez",
+    "department": "Software Engineering",
+    "publications": [
+      {
+        "title": "Agile Methodologies in Academic Software Projects",
+        "journal": "IEEE Software Engineering Review",
+        "year": 2024,
+        "citations": 31,
+        "impact_factor": 4.67,
+        "type": "article",
+        "doi": "10.9012/ieee.2024.789"
+      },
+      {
+        "title": "Scrum Implementation in University Research Teams",
+        "book": "Modern Software Development Practices",
+        "year": 2024,
+        "citations": 12,
+        "type": "book_chapter",
+        "isbn": "978-0123456789"
+      }
+    ]
+  }
+]
