@@ -2,6 +2,7 @@ package com.pikolinc;
 
 import com.pikolinc.records.Publication;
 import com.pikolinc.records.Researcher;
+import com.pikolinc.records.JournalImpact;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -75,5 +76,45 @@ public class Main {
         csvWriter.writeCSV(config.outputResearchers, headers, data, config.delimiter);
         System.out.println("💾 Generated: " + config.outputResearchers);
         System.out.println("📊 Total publications processed: " + data.size());
+    }
+
+    private static void processJournalImpactData(JsonReader jsonReader, CsvWriter csvWriter, Config config)
+            throws IOException, JSONException {
+
+//        JSONArray journalsArray = jsonReader.readJsonArray("journal_impact_data.json");
+        JSONArray journalsArray = jsonReader.readJsonArray(config.inputJournals);
+        System.out.println("📖 Processing " + journalsArray.length() + " journals for impact analysis");
+
+        List<JournalImpact> journals = new ArrayList<>();
+
+        // Using JsonParser to convert JSON objects to JournalImpact records
+        for (int i = 0; i < journalsArray.length(); i++) {
+            JSONObject journalObj = journalsArray.getJSONObject(i);
+            journals.add(JsonParser.toJournalImpact(journalObj));
+        }
+
+        String[] journalHeaders = {"Journal_Name", "ISSN", "Publisher", "Impact_Factor_2024",
+                "Impact_Factor_2023", "Quartile", "Subject_Area",
+                "University_Publications", "Citations_Received"};
+        List<String[]> journalData = new ArrayList<>();
+
+        for (JournalImpact journal : journals) {
+            journalData.add(new String[]{
+                    journal.journalName(),
+                    journal.issn(),
+                    journal.publisher(),
+                    String.valueOf(journal.impactFactor2024()),
+                    String.valueOf(journal.impactFactor2023()),
+                    journal.quartile(),
+                    journal.subjectArea(),
+                    String.valueOf(journal.universityPublications()),
+                    String.valueOf(journal.totalCitationsReceived())
+            });
+        }
+
+//        csvWriter.writeCSV("journal_impact_analysis.csv", journalHeaders, journalData, config.delimiter);
+        csvWriter.writeCSV(config.outputJournals, journalHeaders, journalData, config.delimiter);
+        System.out.println("💾 Generated: " + config.outputJournals);
+        System.out.println("📈 Journal impact analysis complete for Director Érika's review");
     }
 }
