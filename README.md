@@ -6,6 +6,21 @@ NAO IDs:
 3304
 3318
 
+## HOW TO USE
+Specify the args such as
+--delimiter=","
+--input-researchers="input/researcher_publications.json"
+--input-departments="input/department_statistics.json"
+--input-journals="input/journal_impact_data.json"
+--output-researchers="output/researcher_publications_output.csv"
+--output-departments="output/department_statistics_output.csv"
+--output-journals="output/journal_impact_output.csv"
+
+Example run command:
+```
+
+```
+
 ## HOW TO EXECUTE TESTS:
 ### Requirement: 
 - Maven installed
