@@ -19,6 +19,10 @@ Specify the args such as
 Example run command:
 ```
 mvn compile exec:java
+
+// with flags
+
+mvn compile exec:java -Dexec.args="--delimiter=;, --input-researchers=input/researcher_publications.json --input-departments=input/department_statistics.json --input-journals=input/journal_impact_data.json --output-researchers=output/researcher_publications_output.csv --output-departments=output/department_statistics_output.csv --output-journals=output/journal_impact_output.csv"
 ```
 
 ## HOW TO EXECUTE TESTS:

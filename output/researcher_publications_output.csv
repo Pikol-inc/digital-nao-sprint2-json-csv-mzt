@@ -1,6 +1,6 @@
-Researcher_ID,Researcher_Name,Department,Publication_Title,Venue,Year,Citations,Impact_Factor,Type,DOI/ISBN
-DR001,Dr. María Elena Vázquez,Computer Sciences,Machine Learning Applications in Academic Analytics,International Journal of Educational Technology,2024,15,2.45,article,10.1234/ijet.2024.001
-DR001,Dr. María Elena Vázquez,Computer Sciences,Data Mining Techniques for Student Performance Prediction,International Conference on Educational Data Mining,2024,8,N/A,conference_paper,N/A
-DR002,Dr. Carlos Mendoza,Information Systems,Blockchain Technology in Academic Credential Verification,Journal of Information Security,2024,23,3.12,article,10.5678/jis.2024.045
-DR003,Dra. Ana Sofía Ramírez,Software Engineering,Agile Methodologies in Academic Software Projects,IEEE Software Engineering Review,2024,31,4.67,article,10.9012/ieee.2024.789
-DR003,Dra. Ana Sofía Ramírez,Software Engineering,Scrum Implementation in University Research Teams,Modern Software Development Practices,2024,12,N/A,book_chapter,978-0123456789
+Researcher_IDiResearcher_NameiDepartmenti"Publication_Title"iVenueiYeari"Citations"iImpact_FactoriTypeiDOI/ISBN
+DR001iDr. María Elena Vázquezi"Computer Sciences"i"Machine Learning Applications in Academic Analytics"i"International Journal of Educational Technology"i2024i15i2.45i"article"i"10.1234/ijet.2024.001"
+DR001iDr. María Elena Vázquezi"Computer Sciences"i"Data Mining Techniques for Student Performance Prediction"i"International Conference on Educational Data Mining"i2024i8iN/Aiconference_paperiN/A
+DR002iDr. Carlos Mendozai"Information Systems"i"Blockchain Technology in Academic Credential Verification"i"Journal of Information Security"i2024i23i3.12i"article"i"10.5678/jis.2024.045"
+DR003iDra. Ana Sofía Ramírezi"Software Engineering"i"Agile Methodologies in Academic Software Projects"i"IEEE Software Engineering Review"i2024i31i4.67i"article"i"10.9012/ieee.2024.789"
+DR003iDra. Ana Sofía Ramírezi"Software Engineering"i"Scrum Implementation in University Research Teams"i"Modern Software Development Practices"i2024i12iN/Aibook_chapteri978-0123456789

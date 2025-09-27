@@ -22,6 +22,7 @@ public class Config {
 
         for (String arg : args) {
             if (arg.startsWith("--delimiter=")) {
+                System.out.println(arg);
                 config.delimiter = parseDelimiter(arg);
             } else if (arg.startsWith("--input-researchers=")) {
                 config.inputResearchers = arg.substring("--input-researchers=".length());
@@ -73,7 +74,7 @@ public class Config {
      */
     private static void printUsageHelp() {
         System.out.println("\n📖 USAGE:");
-        System.out.println("java com.kaserola4.Main [OPTIONS]");
+        System.out.println("java com.pikolinc.Main [OPTIONS]");
         System.out.println("\nOPTIONS:");
         System.out.println("  --delimiter=CHAR          Set custom delimiter for CSV files (default: comma)");
         System.out.println("                            Examples:");
