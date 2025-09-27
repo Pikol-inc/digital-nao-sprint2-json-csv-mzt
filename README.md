@@ -18,7 +18,7 @@ Specify the args such as
 
 Example run command:
 ```
-
+mvn compile exec:java
 ```
 
 ## HOW TO EXECUTE TESTS:
