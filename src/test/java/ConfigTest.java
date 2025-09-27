@@ -1,4 +1,4 @@
-import com.pikolinc.Config.java;
+import com.pikolinc.Config;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
