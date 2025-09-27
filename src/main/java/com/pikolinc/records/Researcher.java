@@ -1,4 +1,4 @@
-package com.kaserola4.records;
+package com.pikolinc.records;
 
 import java.util.List;
 
