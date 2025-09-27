@@ -3,6 +3,8 @@ package com.pikolinc;
 import com.pikolinc.records.Publication;
 import com.pikolinc.records.Researcher;
 import com.pikolinc.records.JournalImpact;
+import com.pikolinc.records.Department;
+import com.pikolinc.records.DepartmentReport;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -116,5 +118,38 @@ public class Main {
         csvWriter.writeCSV(config.outputJournals, journalHeaders, journalData, config.delimiter);
         System.out.println("💾 Generated: " + config.outputJournals);
         System.out.println("📈 Journal impact analysis complete for Director Érika's review");
+    }
+
+    private static void processDepartmentStatistics(JsonReader jsonReader, CsvWriter csvWriter, Config config)
+            throws IOException, JSONException {
+
+//        JSONObject statsObj = jsonReader.readJsonObject("department_statistics.json");
+        JSONObject statsObj = jsonReader.readJsonObject(config.inputDepartments);
+
+        // Using JsonParser to convert JSON object to DepartmentReport record
+        DepartmentReport departmentReport = JsonParser.toDepartmentReport(statsObj);
+
+        System.out.println("📖 Processing department statistics for: " + departmentReport.reportPeriod());
+
+        String[] deptHeaders = {"Department", "Researchers", "Publications", "Total_Citations",
+                "H_Index", "Avg_Impact_Factor"};
+        List<String[]> deptData = new ArrayList<>();
+
+        for (Department dept : departmentReport.departments()) {
+            deptData.add(new String[]{
+                    dept.name(),
+                    String.valueOf(dept.researchers()),
+                    String.valueOf(dept.publications()),
+                    String.valueOf(dept.totalCitations()),
+                    String.valueOf(dept.hIndex()),
+                    String.valueOf(dept.averageImpactFactor())
+            });
+        }
+
+//        csvWriter.writeCSV("department_summary_report.csv", deptHeaders, deptData, config.delimiter);
+        csvWriter.writeCSV(config.outputDepartments, deptHeaders, deptData, config.delimiter);
+        System.out.println("💾 Generated: " + config.outputDepartments);
+        System.out.println("⏱️ Time saved with automation: " + departmentReport.automationTimeSaved());
+        System.out.println("👥 Total researchers across all departments: " + departmentReport.totalResearchers());
     }
 }
